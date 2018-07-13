@@ -1,0 +1,4 @@
+com\cvg\capp\controller\TestController.class
+com\cvg\capp\config\ContactAppDispatcherServletInitializer.class
+com\cvg\capp\config\SpringWebConfig.class
+com\cvg\capp\config\SpringRootConfig.class
