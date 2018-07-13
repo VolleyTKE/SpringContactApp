@@ -1,4 +1,10 @@
 com\cvg\capp\controller\TestController.class
 com\cvg\capp\config\ContactAppDispatcherServletInitializer.class
 com\cvg\capp\config\SpringWebConfig.class
+com\cvg\capp\dao\BaseDAO.class
+com\cvg\capp\domain\User.class
+com\cvg\capp\domain\Contact.class
+com\cvg\capp\dao\UserDAO.class
+com\cvg\capp\dao\UserDAOImpl.class
 com\cvg\capp\config\SpringRootConfig.class
+com\cvg\capp\dao\ContactDAO.class
