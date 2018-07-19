@@ -1,3 +1,4 @@
+com\cvg\capp\controller\UserController.class
 com\cvg\capp\config\ContactAppDispatcherServletInitializer.class
 com\cvg\capp\domain\User.class
 com\cvg\capp\domain\Contact.class
@@ -7,10 +8,13 @@ com\cvg\capp\rm\ContactRowMapper.class
 com\cvg\capp\exception\UserBlockedException.class
 com\cvg\capp\config\SpringRootConfig.class
 com\cvg\capp\dao\ContactDAO.class
+com\cvg\capp\util\StringUtil.class
 com\cvg\capp\controller\TestController.class
 com\cvg\capp\config\SpringWebConfig.class
 com\cvg\capp\dao\BaseDAO.class
 com\cvg\capp\service\UserService.class
+com\cvg\capp\service\ContactServiceImpl.class
 com\cvg\capp\rm\UserRowMapper.class
 com\cvg\capp\service\UserServiceImpl.class
 com\cvg\capp\dao\ContactDAOImpl.class
+com\cvg\capp\service\ContactService.class
