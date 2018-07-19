@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-@ComponentScan(basePackages = {"com.cvg.capp.dao"})
+@ComponentScan(basePackages = {"com.cvg.capp.dao", "com.cvg.capp.service"})
 public class SpringRootConfig {
     //To Do: Services, DAO, DataSource, Email Sender, ETC, Business Layer Beans
     
