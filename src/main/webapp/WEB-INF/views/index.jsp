@@ -5,17 +5,30 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%--Spring ags import --%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Login - Contact App</title>
+        
+        <%-- You should never use href directly 
+        <link href="static/css/style.css" rel="stylesheet" type="text/css"/>
+        --%>
+        <s:url var="url_css" value="/static/css/style.css"/>
+        <link href="${url_css}" rel="stylesheet" type="text/css"/>
+        
     </head>
-    <body>
+    
+    <s:url var="url_bg" value="/static/images/javabg.jpg"/>
+    <body background="${url_bg}">
         <table border="1" width="80%" align="center" >
             <tr>
                 <td height="80px">
                     <%-- Header --%>
+                    <h1>Contact App - Testing</h1>
                 </td>
             </tr>
             <tr>

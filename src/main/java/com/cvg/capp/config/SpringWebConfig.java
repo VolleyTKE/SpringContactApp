@@ -29,6 +29,10 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter{
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry); 
         //To change body of generated methods, choose Tools | Templates.
+        
+        
+        //handler looks for pattern. Location is the actual location of folders
+        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
     }
     
     @Bean
