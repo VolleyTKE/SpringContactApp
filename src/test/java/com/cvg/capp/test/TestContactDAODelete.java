@@ -6,6 +6,7 @@
 package com.cvg.capp.test;
 
 import com.cvg.capp.config.SpringRootConfig;
+import com.cvg.capp.dao.ContactDAO;
 import com.cvg.capp.dao.UserDAO;
 import com.cvg.capp.domain.User;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +16,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  * @author ccarr
  */
-public class TestUserDAOSave {
+public class TestContactDAODelete {
 
     /**
      * @param args the command line arguments
@@ -25,20 +26,12 @@ public class TestUserDAOSave {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringRootConfig.class);
         
         
-        UserDAO userDAO = ctx.getBean(UserDAO.class);
+        ContactDAO contactDAO = ctx.getBean(ContactDAO.class);
         
-        //TO DO: The user details will be taken from User-Reg-Form
-        User u = new User();
-        u.setName("test 7");
-        u.setPhone("7028675309");
-        u.setEmail("test@youwish.org");
-        u.setAddress("Mumbai");
-        u.setLoginName("tester");
-        u.setPassword("test");
-        u.setRole(1);//Admin Role
-        u.setLoginStatus(1);//Active
-        userDAO.save(u);
-        System.out.print("!!---Data Saved ---!!");
+        //TO DO: The user details will be deleted
+        contactDAO.delete(115);
+        
+        System.out.print("!!---Data Deleted ---!!");
         
     }
     

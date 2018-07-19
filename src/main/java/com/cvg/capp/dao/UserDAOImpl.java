@@ -41,6 +41,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
         SqlParameterSource ps = new MapSqlParameterSource(m);
         super.getNamedParameterJdbcTemplate().update(sql, ps, kh);
         Integer userId = kh.getKey().intValue();
+        u.setUserId(userId);
         
     }
 

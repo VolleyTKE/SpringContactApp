@@ -6,8 +6,8 @@
 package com.cvg.capp.test;
 
 import com.cvg.capp.config.SpringRootConfig;
-import com.cvg.capp.dao.UserDAO;
-import com.cvg.capp.domain.User;
+import com.cvg.capp.dao.ContactDAO;
+import com.cvg.capp.domain.Contact;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -15,7 +15,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  * @author ccarr
  */
-public class TestUserDAOSave {
+public class TestContactDAOSave {
 
     /**
      * @param args the command line arguments
@@ -25,19 +25,20 @@ public class TestUserDAOSave {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringRootConfig.class);
         
         
-        UserDAO userDAO = ctx.getBean(UserDAO.class);
+        ContactDAO contactDAO = ctx.getBean(ContactDAO.class);
         
         //TO DO: The user details will be taken from User-Reg-Form
-        User u = new User();
-        u.setName("test 7");
-        u.setPhone("7028675309");
-        u.setEmail("test@youwish.org");
-        u.setAddress("Mumbai");
-        u.setLoginName("tester");
-        u.setPassword("test");
-        u.setRole(1);//Admin Role
-        u.setLoginStatus(1);//Active
-        userDAO.save(u);
+        Contact c = new Contact();
+        
+        c.setContactId(115);
+        c.setUserId(4);
+        c.setName("115testContact");
+        c.setPhone("7028675309");
+        c.setEmail("test115@youwish.org");
+        c.setAddress("Mumbai");
+        c.setRemark("This test the contact");
+        
+        contactDAO.save(c);
         System.out.print("!!---Data Saved ---!!");
         
     }

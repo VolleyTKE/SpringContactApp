@@ -19,8 +19,8 @@ public interface ContactDAO {
     public void update(Contact c);
     public void delete(Contact c);
     public void delete(Integer contactId);
-    public User findById(Integer contactId);
-    public List<User> findAll();
-    public List<User> findByProperty(String propName, Object propValue);
+    public Contact findById(Integer contactId);
+    public List<Contact> findAll();
+    public List<Contact> findByProperty(String propName, Object propValue);
     
 }
