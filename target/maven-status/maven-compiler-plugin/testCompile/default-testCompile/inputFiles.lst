@@ -1,12 +1,13 @@
-C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOSave.java
-C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOUpdate.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestDataSource.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAODelete.java
-C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestContactDAOUpdate.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserServiceLogin.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserServiceRegister.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOFindByProp.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestContactDAODelete.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestContactDAOSave.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOFindSingleRecord.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOSave.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOUpdate.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestContactDAOUpdate.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOFindAll.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAODeleteUser.java
-C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\test\java\com\cvg\capp\test\TestUserDAOFindSingleRecord.java

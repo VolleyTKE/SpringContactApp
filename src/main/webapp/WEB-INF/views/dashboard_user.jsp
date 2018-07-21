@@ -27,7 +27,6 @@
             <tr>
                 <td height="80px">
                     <%-- Header --%>
-                    <h1>Contact App - Testing</h1>
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>

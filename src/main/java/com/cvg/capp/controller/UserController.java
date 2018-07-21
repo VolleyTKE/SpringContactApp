@@ -26,4 +26,13 @@ public class UserController {
         return "index"; //JSP - /WEB-INF/view/index.jsp
     }
     
+    @RequestMapping(value ="/user/dashboard")
+    public String userDashboard() {
+        return "dashboard_user"; //JSP->dashboard_user.jsp
+    }
+    
+    @RequestMapping(value ="/admin/dashboard")
+    public String adminDashboard() {
+        return "dashboard_admin"; //JSP->dashboard_admin.jsp
+    }
 }

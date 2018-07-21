@@ -1,9 +1,8 @@
 <%-- 
-    Document   : index
-    Created on : Jul 19, 2018, 5:13:32 PM
+    Document   : dashboard_user
+    Created on : Jul 20, 2018, 8:30:55 PM
     Author     : ccarr
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%--Spring ags import --%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="s" %>
@@ -12,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Login - Contact App</title>
+        <title>Admin Dashboard - Contact App</title>
         
         <%-- You should never use href directly 
         <link href="static/css/style.css" rel="stylesheet" type="text/css"/>
@@ -40,8 +39,8 @@
             <tr>
                 <td height="350px" valign="top">
                     <%-- Page Content --%>
-                    <h1>User Login</h1>
-                    TODO -HTML Form
+                    <h1>Admin Dashboard</h1>
+                    TODO - Admin options page
                 </td>
             </tr>
             <tr>
