@@ -23,27 +23,31 @@
     </head>
     
     <s:url var="url_bg" value="/static/images/javabg.jpg"/>
-    <body background="${url_bg}">
+    <body background="${url_bg}" >
         <table border="1" width="80%" align="center" >
             <tr>
                 <td height="80px">
                     <%-- Header --%>
                     <h1>Contact App - Testing</h1>
+                    <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>
             <tr>
-                <td height="250px">
+                <td height="25px">
                     <%-- Menu --%>
+                    <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
-                <td height="350px">
+                <td height="350px" valign="top">
                     <%-- Page Content --%>
+                    <h1>User Login</h1>
+                    TODO -HTML Form
                 </td>
             </tr>
             <tr>
                 <td height ="25px">
-                    <%@ include file = "footer.jsp" %>
+                    <jsp:include page="include/footer.jsp" />
                     <%-- Footer --%>
                 </td>
             </tr>
