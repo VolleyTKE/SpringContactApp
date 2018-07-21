@@ -35,7 +35,7 @@ public class TestUserDAOUpdate {
         u.setEmail("test.update@youwish.org");
         u.setAddress("Mumbai, MS");
         u.setRole(1);//Admin Role
-        u.setLoginStatus(1);//Active
+        u.setLoginStatus(2);//Active
         
         userDAO.update(u);
         System.out.print("!!---Data Updated ---!!");

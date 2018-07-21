@@ -15,6 +15,6 @@ public class UserBlockedException extends Exception {
     }
     
     public UserBlockedException(String errDesc) {
-        
+        System.out.println(errDesc);
     }
 }
