@@ -91,8 +91,8 @@ public class UserController {
     //binds user with a session
     private void addUserInSession(User u, HttpSession session) {
         session.setAttribute("user", u);
-        session.setAttribute("userId", u);
-        session.setAttribute("role", u);
+        session.setAttribute("userId", u.getUserId());
+        session.setAttribute("role", u.getRole());
         
     }
 }

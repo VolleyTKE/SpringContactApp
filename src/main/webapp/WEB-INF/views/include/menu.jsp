@@ -4,4 +4,17 @@
     Author     : ccarr
 --%>
 
-<a href="#">Home</a> | <a href="#">Login</a> | <a href="#">Register</a> | <a href="#">About</a>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+<c:if test="${sessionScope.userId==null}">
+    <a href="#">Home</a> | <a href="#">Login</a> | <a href="#">Register</a> | <a href="#">About</a>    
+</c:if>
+
+<c:if test="${sessionScope.userId!=null && sessionScope.role==1}">
+    <a href="#">Home</a> | <a href="#">User List</a> | <a href="#">Logout</a> | <a href="#">Help</a>    
+</c:if>
+    
+<c:if test="${sessionScope.userId!=null && sessionScope.role==2}">
+    <a href="#">Home</a> | <a href="#">add Contact</a> | <a href="#">contactlist</a> | <a href="#">Help</a> | <a href="#">logout</a>    
+</c:if>
