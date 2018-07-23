@@ -45,7 +45,7 @@ public class UserServiceImpl extends BaseDAO implements UserService {
             //loginname is a unique key
             User u = getNamedParameterJdbcTemplate().queryForObject(sql, m, new UserRowMapper());
             if (u.getLoginStatus().equals(UserService.LOGIN_STATUS_BLOCKED)) {
-                throw new UserBlockedException("Your accout has been blocked. Contact to admin.");
+                throw new UserBlockedException("Your accout has been blocked. Contact admin.");
             } else {
                 return u;
             }

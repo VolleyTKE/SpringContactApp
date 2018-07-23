@@ -41,6 +41,7 @@
                     <%-- Page Content --%>
                     <h1>User Dashboard</h1>
                     TODO - User options page
+                    Show Which User is logged in
                 </td>
             </tr>
             <tr>

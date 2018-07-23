@@ -1,3 +1,4 @@
+com\cvg\capp\command\LoginCommand.class
 com\cvg\capp\controller\UserController.class
 com\cvg\capp\config\ContactAppDispatcherServletInitializer.class
 com\cvg\capp\domain\User.class

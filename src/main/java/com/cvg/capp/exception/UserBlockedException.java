@@ -10,11 +10,15 @@ package com.cvg.capp.exception;
  * @author ccarr
  */
 public class UserBlockedException extends Exception {
+    /**
+     * Creates User object without error description.
+     */
     public UserBlockedException() {
-        
     }
-    
+    /**
+     * Creates User object with error description.
+     */
     public UserBlockedException(String errDesc) {
-        System.out.println(errDesc);
-    }
+        super(errDesc);
+    }  
 }

@@ -13,6 +13,7 @@ C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\controller\TestController.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\config\SpringWebConfig.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\dao\UserDAO.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\command\LoginCommand.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\service\UserService.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\config\ContactAppDispatcherServletInitializer.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\util\StringUtil.java
