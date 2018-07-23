@@ -76,6 +76,13 @@ public class UserController {
         }
     }
     
+    @RequestMapping(value ="/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+      
+        return "redirect:index?act=lo"; //JSP index with lo flag
+    }
+    
     @RequestMapping(value ="/user/dashboard")
     public String userDashboard() {
         

@@ -46,6 +46,9 @@
                     <c:if test="${err!=null}">
                         <p class="error">${err}</p>
                     </c:if>
+                    <c:if test="${param.act eq 'lo'}">
+                        <p class="success">Logout Successfully! Thanks for using contact application.</p>
+                    </c:if>
                     <s:url var="url_login" value="/login"/>
                     <f:form action="${url_login}" modelAttribute="command">
                         <table border="1">
