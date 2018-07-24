@@ -49,6 +49,9 @@
                     <c:if test="${param.act eq 'lo'}">
                         <p class="success">Logout Successfully! Thanks for using contact application.</p>
                     </c:if>
+                    <c:if test="${param.act eq 'reg'}">
+                        <p class ="success">User Successfully Registered</p>
+                    </c:if>
                     <s:url var="url_login" value="/login"/>
                     <f:form action="${url_login}" modelAttribute="command">
                         <table border="1">
@@ -63,8 +66,8 @@
                             <tr>                                
                                 <td colspan="2" align="right">
                                     <button>Login</button> 
-                                    <%--<s:url value="/reg_form"/>--%></br>
-                                    <a href="#">New User Registration</a>
+                                    </br>
+                                    <a href="<s:url value="/reg_form"/>">New User Registration</a>
                                 </td>
                             </tr>
                         </table>

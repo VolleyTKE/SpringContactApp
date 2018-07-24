@@ -1,3 +1,4 @@
+com\cvg\capp\controller\ContactController.class
 com\cvg\capp\command\LoginCommand.class
 com\cvg\capp\controller\UserController.class
 com\cvg\capp\config\ContactAppDispatcherServletInitializer.class
@@ -17,5 +18,6 @@ com\cvg\capp\service\UserService.class
 com\cvg\capp\service\ContactServiceImpl.class
 com\cvg\capp\rm\UserRowMapper.class
 com\cvg\capp\service\UserServiceImpl.class
+com\cvg\capp\command\UserCommand.class
 com\cvg\capp\dao\ContactDAOImpl.class
 com\cvg\capp\service\ContactService.class

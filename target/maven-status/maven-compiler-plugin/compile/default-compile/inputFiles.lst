@@ -1,7 +1,9 @@
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\command\UserCommand.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\exception\UserBlockedException.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\service\ContactService.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\dao\ContactDAO.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\rm\UserRowMapper.java
+C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\controller\ContactController.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\domain\Contact.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\config\SpringRootConfig.java
 C:\Users\ccarr\Documents\NetBeansProjects\SpringContactApp\src\main\java\com\cvg\capp\service\ContactServiceImpl.java

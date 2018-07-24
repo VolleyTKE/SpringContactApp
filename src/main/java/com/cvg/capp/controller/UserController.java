@@ -6,6 +6,7 @@
 package com.cvg.capp.controller;
 
 import com.cvg.capp.command.LoginCommand;
+import com.cvg.capp.command.UserCommand;
 import com.cvg.capp.domain.User;
 import com.cvg.capp.exception.UserBlockedException;
 import com.cvg.capp.service.UserService;
@@ -13,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -94,6 +96,28 @@ public class UserController {
         return "dashboard_admin"; //JSP->dashboard_admin.jsp
     }
     
+    @RequestMapping(value = "/reg_form")
+    public String registrationForm(Model m) {
+        UserCommand cmd = new UserCommand();
+        m.addAttribute("command", cmd);
+        return "reg_form";//JSP
+    }
+    
+    
+        @RequestMapping(value = "/register")
+    public String registerUser(@ModelAttribute("command") UserCommand cmd, Model m) {
+        try {
+            User user = cmd.getUser();
+            user.setRole(UserService.ROLE_USER);
+            user.setLoginStatus(UserService.LOGIN_STATUS_ACTIVE);
+            userService.register(user);
+            return "redirect:index?act=reg"; //Login Page
+        } catch (DuplicateKeyException e) {
+            e.printStackTrace();
+            m.addAttribute("err", "Username is already registered. Please select another username.");
+            return "reg_form";//JSP
+        }
+    }
     
     //binds user with a session
     private void addUserInSession(User u, HttpSession session) {
