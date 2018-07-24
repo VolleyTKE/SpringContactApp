@@ -6,6 +6,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%--Spring ags import --%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 
 <html>
@@ -40,8 +41,8 @@
                 <td height="350px" valign="top">
                     <%-- Page Content --%>
                     <h1>User Dashboard</h1>
-                    TODO - User options page
-                    Show Which User is logged in
+                    TODO - User options page</br>
+                    Welcome ${userName}
                 </td>
             </tr>
             <tr>

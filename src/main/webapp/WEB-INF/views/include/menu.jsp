@@ -19,5 +19,9 @@
 </c:if>
     
 <c:if test="${sessionScope.userId!=null && sessionScope.role==2}">
-    <a href="#">Home</a> | <a href="#">add Contact</a> | <a href="#">contactlist</a> | <a href="#">Help</a> | <a href="${url_logout}">logout</a>    
+    <%-- General User is logged in : User Menu --%>
+    <s:url var="url_uhome" value="/user/dashboard"/>
+    <s:url var="url_cform" value="/user/contact_form"/>
+    <s:url var="url_clist" value="/user/clist"/>
+    <a href="${url_uhome}">Home</a> | <a href="${url_cform}">add Contact</a> | <a href="${url_clist}">contact list</a> | <a href="#">Help</a> | <a href="${url_logout}">logout</a>    
 </c:if>

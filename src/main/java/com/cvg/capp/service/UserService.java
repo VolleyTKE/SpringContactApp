@@ -51,8 +51,12 @@ public interface UserService {
      * @param loginStatus 
      */
     public void changeLoginStatus(Integer userId, Integer loginStatus);
-    
-    
-    
+        
+    /**
+     * 
+     * @param userId
+     * @return 
+     */
+    public User getUserById(Integer userId);
     
 }
