@@ -20,6 +20,7 @@
             <tr>
                 <td height="80px">
                     <%-- Header --%>
+                    TO DO: New front end to consume ReST API
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>

@@ -87,8 +87,9 @@ public class UserController {
     
     @RequestMapping(value ="/user/dashboard")
     public String userDashboard(Model m, HttpSession session) {
-        //TODO show name of Logged in user
+        // ??todo, is there a better way than a service to show logged in user??
         Integer userId = (Integer) session.getAttribute("userId");
+        //Shows logged in user
         m.addAttribute("userName", userService.getUserById(userId).getName());
         return "dashboard_user"; //JSP->dashboard_user.jsp
     }
