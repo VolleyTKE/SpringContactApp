@@ -10,8 +10,9 @@
 <s:url var="url_logout" value="/logout"/>
 
 <c:if test="${sessionScope.userId==null}">
+    <s:url var="url_home" value="/index"/>
     <s:url var="url_reg_form" value="/reg_form/"/>
-    <a href="#">Home</a> | <a href="#">Login</a> | <a href="${url_reg_form}">Register</a> | <a href="#">About</a>    
+    <a href="${url_home}">Home</a> | <a href="${url_home}"Login</a> | <a href="${url_reg_form}">Register</a> | <a href="#">About</a>    
 </c:if>
 
 <c:if test="${sessionScope.userId!=null && sessionScope.role==1}">
