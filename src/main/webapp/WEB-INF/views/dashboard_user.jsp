@@ -40,9 +40,10 @@
             <tr>
                 <td height="350px" valign="top">
                     <%-- Page Content --%>
-                    <h1>User Dashboard</h1>
+                    <h1>${userName} Dashboard</h1>
+                    Welcome 
                     TODO - User options page</br>
-                    Welcome ${userName}
+                    
                 </td>
             </tr>
             <tr>
