@@ -118,4 +118,10 @@ public class ContactController {
         return "redirect:clist?act=del"; //JSP
     }
     
+    @RequestMapping (value = "/user/bulk_cdelete")
+    public String deleteBulkContact(@RequestParam("cid") Integer[] contactIds) {
+        contactService.delete(contactIds);
+        return "redirect:clist?act=del"; //JSP
+    }
+    
 }
