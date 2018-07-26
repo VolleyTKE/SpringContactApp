@@ -42,6 +42,7 @@
                     <h1>Admin Dashboard</h1>
                     TODO - Admin options page
                     Show Which User is logged in
+                    ${userList}
                 </td>
             </tr>
             <tr>
