@@ -12,13 +12,15 @@
 <c:if test="${sessionScope.userId==null}">
     <s:url var="url_home" value="/index"/>
     <s:url var="url_reg_form" value="/reg_form/"/>
-    <a href="${url_home}">Home</a> | <a href="${url_home}"Login</a> | <a href="${url_reg_form}">Register</a> | <a href="#">About</a>    
+    <s:url var="url_help" value="/help"/>
+    <a href="${url_home}">Home</a> | <a href="${url_home}"Login</a> | <a href="${url_reg_form}">Register</a> | <a href="#">About</a> | <a href="${url_help}">Help</a>    
 </c:if>
 
 <c:if test="${sessionScope.userId!=null && sessionScope.role == 1}">
     <%-- Admin is logged in : Admin Menu --%>    
     <%--Notice secondary use of s:url --%>
-    <a href="<s:url value="/admin/dashboard"/>">Home</a> | <a href="<s:url value="/admin/users"/>">User List</a> | <a href="${url_logout}">Logout</a>  
+    <s:url var="url_help" value="/help"/>
+    <a href="<s:url value="/admin/dashboard"/>">Home</a> | <a href="<s:url value="/admin/users"/>">User List</a> | <a href="${url_logout}">Logout</a> | <a href="${url_help}">Help</a>  
 </c:if>
     
 <c:if test="${sessionScope.userId!=null && sessionScope.role==2}">
@@ -26,5 +28,6 @@
     <s:url var="url_uhome" value="/user/dashboard"/>
     <s:url var="url_cform" value="/user/contact_form"/>
     <s:url var="url_clist" value="/user/clist"/>
-    <a href="${url_uhome}">Home</a> | <a href="${url_cform}">add Contact</a> | <a href="${url_clist}">contact list</a> | <a href="#">Help</a> | <a href="${url_logout}">logout</a>    
+    <s:url var="url_help" value="/help"/>
+    <a href="${url_uhome}">Home</a> | <a href="${url_cform}">add Contact</a> | <a href="${url_clist}">contact list</a> | <a href="${url_help}">Help</a> | <a href="${url_logout}">logout</a>    
 </c:if>

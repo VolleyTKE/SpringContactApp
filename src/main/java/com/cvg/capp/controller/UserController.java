@@ -159,4 +159,14 @@ public class UserController {
     }
     
     
+    
+    @RequestMapping(value = "/help")
+    public String helpPage() {
+        
+        return "help"; //help JSP
+    }
+    
+    
+    
+    
 }
