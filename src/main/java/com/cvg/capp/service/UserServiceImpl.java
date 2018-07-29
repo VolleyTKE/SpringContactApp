@@ -59,9 +59,15 @@ public class UserServiceImpl extends BaseDAO implements UserService {
         return userDAO.findByProperty("role", UserService.ROLE_USER);
     }
 
+    
+    //TO DO move to DAO and add service method
     @Override
     public void changeLoginStatus(Integer userId, Integer loginStatus) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "UPDATE user SET loginStatus=:lst WHERE userId=:uid";
+        Map m = new HashMap();
+        m.put("uid", userId);
+        m.put("lst", loginStatus);
+        getNamedParameterJdbcTemplate().update(sql, m);
     }
     
     @Override

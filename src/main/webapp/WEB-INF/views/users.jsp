@@ -14,9 +14,9 @@
         <title>User List - Contact Application </title>
         <s:url var="url_css" value="/static/css/style.css"/>
         <link href="${url_css}" rel="stylesheet" type="text/css"/> 
-        <s:url var="url_jqlib" value="/static/js/jquery-3.2.1.min.js" />
+        <s:url var="url_jqlib" value="/static/js/jquery-3.3.1.min.js" />
         <script src="${url_jqlib}"></script>
-<!--        <script>
+        <script>
             function changeStatus(uid, lstatus){
                 //alert(userId+", "+loginStatus);
                 $.ajax({
@@ -27,7 +27,7 @@
                     }
                 });
             }
-        </script>-->
+        </script>
     </head>
     <s:url var="url_bg" value="/static/images/javabg.jpg"/>
     <body background="${url_bg}">
