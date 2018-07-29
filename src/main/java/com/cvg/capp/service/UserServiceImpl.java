@@ -13,7 +13,6 @@ import com.cvg.capp.rm.UserRowMapper;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -74,5 +73,17 @@ public class UserServiceImpl extends BaseDAO implements UserService {
     public User getUserById(Integer userId) {
         return userDAO.findById(userId);
     }
+
+    @Override
+    public Boolean isUsernameExist(String username) {
+        String sql = "SELECT count(loginName) FROM user WHERE loginName=?";
+        Integer count = getJdbcTemplate().queryForObject(sql, new String[]{username}, Integer.class);
+        if(count==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
+        
 }

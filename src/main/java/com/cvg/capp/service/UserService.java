@@ -59,4 +59,7 @@ public interface UserService {
      */
     public User getUserById(Integer userId);
     
+    
+    public Boolean isUsernameExist(String username);
+    
 }
