@@ -26,6 +26,19 @@
     <s:url var="url_bg" value="/static/images/javabg.jpg"/>
                  
     <s:url var="url_home" value="/user/dashboard"/>
+    
+    <c:if test="${sessionScope.userId==null}">
+    <s:url var="url_home" value="/index"/>
+    </c:if>
+
+    <c:if test="${sessionScope.userId!=null && sessionScope.role == 1}">
+    <s:url var="url_home" value="/admin/dashboard"/>
+    </c:if>
+    
+    <c:if test="${sessionScope.userId!=null && sessionScope.role==2}">
+    <s:url var="url_home" value="/user/dashboard"/>
+    </c:if>
+    
     <body background="${url_bg}" >
         <h1>Hello, Welcome to the help page!</h1>
         <h3><a href="${url_home}">Home</a></h3>

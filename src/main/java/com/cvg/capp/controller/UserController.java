@@ -34,12 +34,16 @@ public class UserController {
     //giving value means you can add multiple mappings
     //"/" is the default mapping
     @RequestMapping(value = {"/", "/index"})
-    public String index(Model m) {
+    public String index(Model m, HttpSession session) {
         m.addAttribute("command", new LoginCommand());
+        
+        return "/index"; 
+                
+        
         //index is the page name 
         //prefix is /web-inf/view
         //suffix is .jsp
-        return "index"; //JSP - /WEB-INF/view/index.jsp
+        //return "index"; //JSP - /WEB-INF/view/index.jsp
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -159,11 +163,9 @@ public class UserController {
     }
     
     
-    
     @RequestMapping(value = "/help")
     public String helpPage() {
-        
-        return "help"; //help JSP
+        return "help";//help JSP
     }
     
     
