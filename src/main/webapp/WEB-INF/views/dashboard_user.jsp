@@ -43,7 +43,7 @@
                     <h1>${userName} Dashboard</h1>
                     Welcome 
                     TODO - User options page</br>
-                    
+                    <a href="#">Edit Profile</a>  
                 </td>
             </tr>
             <tr>

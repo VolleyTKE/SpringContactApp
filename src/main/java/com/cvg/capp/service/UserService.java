@@ -62,4 +62,6 @@ public interface UserService {
     
     public Boolean isUsernameExist(String username);
     
+    public void update(User u);
+    
 }
