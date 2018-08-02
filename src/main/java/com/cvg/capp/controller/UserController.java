@@ -168,14 +168,14 @@ public class UserController {
         return "help";//help JSP
     }
     
-    @RequestMapping(value = "user/edit_user")
-    public String prepareEditUser(Model m, HttpSession session, @RequestParam("uid") Integer uid) {
-        Integer userId = (Integer) session.getAttribute("userId");
-        User u = userService.getUserById(userId);
-        u.setUserId(userId);
-        m.addAttribute(u)
-        return "redirect:user/dashboard?act=usv"; //JSP
-    }
+//    @RequestMapping(value = "user/edit_user")
+//    public String prepareEditUser(Model m, HttpSession session, @RequestParam("uid") Integer uid) {
+//        Integer userId = (Integer) session.getAttribute("userId");
+//        User u = userService.getUserById(userId);
+//        u.setUserId(userId);
+//        m.addAttribute("command", )
+//        return "redirect:user/dashboard?act=usv"; //JSP
+//    }
     
     
     
