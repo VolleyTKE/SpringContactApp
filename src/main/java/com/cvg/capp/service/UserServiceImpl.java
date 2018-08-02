@@ -84,6 +84,11 @@ public class UserServiceImpl extends BaseDAO implements UserService {
             return false;
         }
     }
+
+    @Override
+    public void update(User u) {
+        userDAO.update(u);
+    }
     
         
 }
