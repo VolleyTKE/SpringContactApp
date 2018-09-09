@@ -8,6 +8,7 @@ package com.cvg.capp.controller;
 import org.slf4j.LoggerFactory;
 import com.cvg.capp.domain.Contact;
 import com.cvg.capp.service.ContactService;
+import java.util.List;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -58,6 +59,29 @@ public class restContactController {
     return contactService.findById(contactId);
     }
     
+//    @RequestMapping (value = "/user/clist")
+//    public String contactList(Model m, HttpSession session) {
+//        Integer userId = (Integer) session.getAttribute("userId");
+//        m.addAttribute("contactList", contactService.findUserContact(userId));
+//        return "clist"; //JSP
+//    }
+//    
+//    @RequestMapping(value="/getAllItems", method = RequestMethod.GET, produces = {"application/json"})
+//	public @ResponseBody List<Item> listAllItems()	{
+//		return dao.getAllItems();
+//	}
+    
+    
+    //All Users Contacts
+    //Session Based
+    @RequestMapping(value ="/getAllContacts", method = RequestMethod.GET)
+    public List<Contact> getAllContacts(Model m, HttpSession session) {
+        Integer userId = (Integer) session.getAttribute("userId");
+        m.addAttribute("contactList", contactService.findUserContact(userId));
+        System.out.println(contactService.findUserContact(userId));
+        return contactService.findUserContact(userId);
+    }
+        
           
     
 }
