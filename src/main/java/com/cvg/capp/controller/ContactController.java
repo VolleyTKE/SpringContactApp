@@ -31,6 +31,8 @@ public class ContactController {
     //Check in the new>webservices
     
     
+  
+    
     @RequestMapping(value = "/user/contact_form")
     public String contactForm(Model m) {
         Contact contact = new Contact();

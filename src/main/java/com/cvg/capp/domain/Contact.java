@@ -5,12 +5,21 @@
  */
 package com.cvg.capp.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.persistence.Entity;
+
 /**
  *
  * @author ccarr
  */
 
+
+
+
 public class Contact {
+    
+    
+    //JSON Structure
     private Integer contactId; //PK
     private Integer userId; //FK
     private String name;
@@ -20,6 +29,28 @@ public class Contact {
     private String remark;
 
     public Contact() {
+    }
+    
+    public Contact(Integer contactId) {
+        this.contactId = contactId;
+    }
+    
+    public Contact(@JsonProperty("contactId") Integer contactId, 
+            @JsonProperty("userId") Integer userId, 
+            @JsonProperty("name") String name,
+            @JsonProperty("phone") String phone,
+            @JsonProperty("email") String email,
+            @JsonProperty("address") String address,
+            @JsonProperty("remark") String remark) {
+        super();
+        this.contactId = contactId;
+        this.userId = userId;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.remark = remark;
+        
     }
     
     public Integer getContactId() {
