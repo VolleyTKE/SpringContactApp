@@ -20,6 +20,7 @@ import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -71,6 +72,20 @@ public class restContactController {
         System.out.println(contactService.findUserContact(userId));
         return contactService.findUserContact(userId);
     }
+    
+    
+   
+   //Update contact, probably need updateDAO by id
+//   @RequestMapping(value = "/{contactId}", method = RequestMethod.PUT)
+//   public Contact updateContact(@PathVariable("id") long id, @RequestBody Contact c, HttpSession session) {
+//       Integer contactId = (Integer) session.getAttribute("aContactId");
+//       c.setContactId(contactId);
+//       contactService.update(c);
+//       session.removeAttribute("aContactId");
+//       Integer userId = (Integer) session.getAttribute("userId");
+//       
+//       return contactService.update(c);
+//   }
     
     @RequestMapping(value = "/delete/{contactId}", method = RequestMethod.DELETE)
     public void delete(@PathVariable("contactId") int contactId) {
