@@ -19,15 +19,17 @@ public interface ContactService {
 
     public void update(Contact c);
 
-    public void delete(Integer cotactId);
+    public void delete(Integer contactId);
    
     /**
      * Bulk delete
      * @param cotactIds 
      */
-    public void delete(Integer[] cotactIds);
+    public void delete(Integer[] contactIds);
     
-    public Contact findById(Integer cotactId);
+    public Contact findById(Integer contactId);
+    
+    public Contact findById(Integer contactId, Integer userId);
 
     /**
      * This method returns all User Contact (user who is logged in).

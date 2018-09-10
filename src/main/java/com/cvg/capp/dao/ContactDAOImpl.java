@@ -81,6 +81,15 @@ public class ContactDAOImpl extends BaseDAO implements ContactDAO {
         
         return getJdbcTemplate().queryForObject(sql, new ContactRowMapper(), contactId);
     }
+     
+    
+    //TODO error handling for null
+    @Override
+    public Contact findById(Integer contactId, Integer userId) {
+        String sql = "SELECT * FROM contact WHERE userId=? "
+                + "AND contactId LIKE '%" + contactId + "%'";
+        return getJdbcTemplate().queryForObject(sql, new ContactRowMapper(), userId);
+    }
 
     @Override
     public List<Contact> findAll() {

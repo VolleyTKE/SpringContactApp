@@ -41,36 +41,26 @@ public class restContactController {
     @Autowired
     private ContactService contactService;
     
-//Things I used for testing    
-    
-//    @RequestMapping(value = "/test2", method = RequestMethod.GET)
-//    public ResponseEntity<Contact> test(){
-//        Contact test2 = new Contact(205, 11, "test2", "4178490260", "blank", "blank", "remaks");
-//        System.out.println(test2.getContactId());
-//        return ResponseEntity.ok().body(test2);
+  
+    //single contact
+//    @RequestMapping(value = "/{contactId}", method = RequestMethod.GET)
+//    public Contact singleContact(@PathVariable("contactId") int contactId) {
+//        System.out.println(contactService.findById(contactId));
+//    return contactService.findById(contactId);
 //    }
-    
-    
     
     //single contact
+    //Session based
     @RequestMapping(value = "/{contactId}", method = RequestMethod.GET)
-    public Contact singleContact(@PathVariable("contactId") int contactId) {
-        System.out.println(contactService.findById(contactId));
-    return contactService.findById(contactId);
+    public Contact singleSessionContact(@PathVariable("contactId") int contactId, 
+            Model m, HttpSession session) {
+        Integer userId = (Integer) session.getAttribute("userId");
+        m.addAttribute("scontact", contactService.findById(contactId, userId));
+        System.out.println(contactService.findById(contactId, userId));
+        System.out.println(session.getId());
+        
+    return contactService.findById(contactId, userId);
     }
-    
-//    @RequestMapping (value = "/user/clist")
-//    public String contactList(Model m, HttpSession session) {
-//        Integer userId = (Integer) session.getAttribute("userId");
-//        m.addAttribute("contactList", contactService.findUserContact(userId));
-//        return "clist"; //JSP
-//    }
-//    
-//    @RequestMapping(value="/getAllItems", method = RequestMethod.GET, produces = {"application/json"})
-//	public @ResponseBody List<Item> listAllItems()	{
-//		return dao.getAllItems();
-//	}
-    
     
     //All Users Contacts
     //Session Based
@@ -80,6 +70,11 @@ public class restContactController {
         m.addAttribute("contactList", contactService.findUserContact(userId));
         System.out.println(contactService.findUserContact(userId));
         return contactService.findUserContact(userId);
+    }
+    
+    @RequestMapping(value = "/delete/{contactId}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable("contactId") int contactId) {
+        contactService.delete(contactId);
     }
         
           

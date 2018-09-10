@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ContactServiceImpl extends BaseDAO implements ContactService {
 
-       @Autowired
+    @Autowired
     private ContactDAO contactDAO;
     
     @Override    
@@ -35,13 +35,13 @@ public class ContactServiceImpl extends BaseDAO implements ContactService {
     }
 
     @Override
-    public void delete(Integer cotactId) {
-        contactDAO.delete(cotactId);
+    public void delete(Integer contactId) {
+        contactDAO.delete(contactId);
     }
 
     @Override
-    public void delete(Integer[] cotactIds) {
-        String ids = StringUtil.toCommaSeparatedString(cotactIds);
+    public void delete(Integer[] contactIds) {
+        String ids = StringUtil.toCommaSeparatedString(contactIds);
         String sql = "DELETE FROM contact WHERE contactId IN("+ids+")";
         getJdbcTemplate().update(sql);
     }
@@ -51,6 +51,8 @@ public class ContactServiceImpl extends BaseDAO implements ContactService {
         return contactDAO.findByProperty("userId", userId);
     }
 
+    
+    // Move to DAO
     @Override
     public List<Contact> findUserContact(Integer userId, String txt) {
         String sql = "SELECT contactId, userId, name, phone, email, address, "
@@ -64,6 +66,16 @@ public class ContactServiceImpl extends BaseDAO implements ContactService {
     @Override
     public Contact findById(Integer contactId) {
         return contactDAO.findById(contactId);
+    }
+    
+    
+    public Contact getUserContact(Integer contactId, Integer userId) {
+        return contactDAO.findById(contactId, userId);
+    }
+
+    @Override
+    public Contact findById(Integer contactId, Integer userId) {
+        return contactDAO.findById(contactId, userId); 
     }
     
 }

@@ -20,6 +20,7 @@ public interface ContactDAO {
     public void delete(Contact c);
     public void delete(Integer contactId);
     public Contact findById(Integer contactId);
+    public Contact findById(Integer contactId, Integer userId);
     public List<Contact> findAll();
     public List<Contact> findByProperty(String propName, Object propValue);
     

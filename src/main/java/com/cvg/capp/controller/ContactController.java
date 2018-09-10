@@ -29,9 +29,7 @@ public class ContactController {
     
     //TODO make contacts ReST-ful
     //Check in the new>webservices
-    
-    
-  
+      
     
     @RequestMapping(value = "/user/contact_form")
     public String contactForm(Model m) {
