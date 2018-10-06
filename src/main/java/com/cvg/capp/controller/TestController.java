@@ -6,8 +6,14 @@
 package com.cvg.capp.controller;
 
 import java.util.Date;
+import java.util.List;
+import javax.servlet.http.HttpSession;
+import com.cvg.capp.domain.Contact;
+import com.cvg.capp.service.ContactService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -17,6 +23,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TestController {
+
+    private ContactService contactService;
     
     @RequestMapping("/test/hello")
     public String helloWorld()  {
@@ -35,6 +43,13 @@ public class TestController {
         Date d = new Date();
         return d.toString();
     }
-    
+
+    @RequestMapping(value ="/getAllContacts", method = RequestMethod.GET)
+    public List<Contact> getAllContacts(Model m, HttpSession session) {
+        Integer userId = (Integer) session.getAttribute("userId");
+        m.addAttribute("contactList", contactService.findUserContact(userId));
+        System.out.println(contactService.findUserContact(userId));
+        return contactService.findUserContact(userId);
+    }
     
 }
