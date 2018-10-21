@@ -23,7 +23,7 @@ public interface ContactService {
    
     /**
      * Bulk delete
-     * @param cotactIds 
+     * @param contactIds
      */
     public void delete(Integer[] contactIds);
     

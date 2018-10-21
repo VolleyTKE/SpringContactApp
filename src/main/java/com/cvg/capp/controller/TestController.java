@@ -43,13 +43,4 @@ public class TestController {
         Date d = new Date();
         return d.toString();
     }
-
-    @RequestMapping(value ="/getAllContacts", method = RequestMethod.GET)
-    public List<Contact> getAllContacts(Model m, HttpSession session) {
-        Integer userId = (Integer) session.getAttribute("userId");
-        m.addAttribute("contactList", contactService.findUserContact(userId));
-        System.out.println(contactService.findUserContact(userId));
-        return contactService.findUserContact(userId);
     }
-    
-}

@@ -114,14 +114,20 @@ public class ContactController {
     
     @RequestMapping (value = "/user/del_contact")
     public String deleteContact(@RequestParam("cid") Integer contactId) {
-        contactService.delete(contactId);
-        return "redirect:clist?act=del"; //JSP
+        if(contactId != null) {
+            contactService.delete(contactId);
+            return "redirect:clist?act=del"; //JSP
+        }
+        else return "clist";
     }
     
     @RequestMapping (value = "/user/bulk_cdelete")
     public String deleteBulkContact(@RequestParam("cid") Integer[] contactIds) {
-        contactService.delete(contactIds);
-        return "redirect:clist?act=del"; //JSP
+        if(contactIds != null) {
+            contactService.delete(contactIds);
+            return "redirect:clist?act=del"; //JSP
+        }
+        else return "clist";
     }
     
 }
